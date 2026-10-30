@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Gumazing Hydration – Claim Your 20% Discount</title>
+  <title>Gumazing Hydration – Claim Your 15% Discount</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
@@ -20,9 +20,7 @@
 
     .app { position: relative; z-index: 1; width: 100%; max-width: 1200px; min-height: 100vh; padding: 18px 16px 32px; display: flex; flex-direction: column; margin: 0 auto; }
 
-    .top-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; gap: 12px; }
-    .partner-logo { height: 52px; }
-    .top-bar .logo-img { max-width: 46%; }
+    .top-bar { display: flex; align-items: center; justify-content: flex-start; margin-bottom: 8px; gap: 12px; }
     .logo-img { height: 60px; width: auto; object-fit: contain; }
     /* Shown only if the logo image fails to load */
     .logo-text { font-size: 1.5rem; font-weight: 900; letter-spacing: 0.08em; color: #fff; line-height: 60px; }
@@ -128,7 +126,6 @@
       .coupon-name { font-size: 2.1rem; }
       .coupon-amount { font-size: 4.4rem; }
     }
-    @media (max-width: 480px) { .logo-img { height: 42px; } .partner-logo { height: 36px; } }
   </style>
 </head>
 
@@ -144,8 +141,6 @@
 
   <div class="app">
     <header class="top-bar">
-      <!-- Anytime Fitness logo (left). File: "anytime fitness white.png" in the repository. -->
-      <img src="anytime%20fitness%20white.png" alt="Anytime Fitness" class="logo-img partner-logo" />
       <img src="Hydration%20Logo%20white%201.png" alt="Gumazing Hydration" class="logo-img"
            onerror="this.style.display='none'; document.getElementById('logoText').style.display='block';" />
       <div id="logoText" class="logo-text" style="display:none;">GUMAZING <span>HYDRATION</span></div>
@@ -157,9 +152,9 @@
         <div class="card">
           <div>
             <p class="subtitle">SIP STRONG, STAY AMAZING!</p>
-            <h1>CLAIM YOUR 20% DISCOUNT</h1>
-            <div class="discount-badge"><span class="big">20% OFF</span></div>
-            <p>Fill in this quick form and get <span class="highlight">20% off</span> your Gumazing Hydration purchase.</p>
+            <h1>CLAIM YOUR 15% DISCOUNT</h1>
+            <div class="discount-badge"><span class="big">15% OFF</span></div>
+            <p>Fill in this quick form and get <span class="highlight">15% off</span> your Gumazing Hydration purchase.</p>
             <p>It takes less than a minute.</p>
           </div>
 
@@ -181,7 +176,7 @@
           <div>
             <p class="subtitle">Almost there</p>
             <h2>TELL US ABOUT YOURSELF</h2>
-            <p>Enter your details to unlock your 20% discount.</p>
+            <p>Enter your details to unlock your 15% discount.</p>
 
             <div class="input-group">
               <label for="name">Name</label>
@@ -234,17 +229,17 @@
         <div class="card center">
           <div>
             <p class="subtitle">Coupon Confirmed ✅</p>
-            <h2 id="couponTitle">Your 20% Discount Is Ready!</h2>
+            <h2 id="couponTitle">Your 15% Discount Is Ready!</h2>
             <p>Claim your discount by showing this screen at the counter.</p>
 
             <div class="counter-banner">
-              <b>Counter staff:</b> Please apply a 20% discount for the customer below.
+              <b>Counter staff:</b> Please apply a 15% discount for the customer below.
             </div>
 
             <div class="coupon">
               <div class="coupon-label">This coupon belongs to</div>
               <div class="coupon-name" id="couponName">—</div>
-              <div class="coupon-amount">20%<span>OFF</span></div>
+              <div class="coupon-amount">15%<span>OFF</span></div>
 
               <div class="coupon-meta">
                 <div class="k">Phone</div><div class="v" id="couponPhone">—</div>
@@ -591,7 +586,7 @@
     }
     populateCountryCodes();
 
-    const CLAIM_LABEL = "20% Discount";
+    const CLAIM_LABEL = "15% Discount";
     let currentData = { name: '', phone: '', email: '', company: '', offer: CLAIM_LABEL };
     let isSubmitting = false;
     let holdCouponScreen = false;
